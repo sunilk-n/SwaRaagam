@@ -11,7 +11,7 @@ contact: sunil.nerella39@gmail.com
 ###################################################
 
 
-Copyright (C) 2019-2020 Sunil Kumar Nerella
+Copyright (C) 2019 Sunil Kumar Nerella
 
 Licensed under GNU GPL-3.0-or-later
 

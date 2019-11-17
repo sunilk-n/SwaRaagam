@@ -14,8 +14,12 @@
    <string>Form</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
-    <widget class="QLineEdit" name="songNameEdit"/>
+   <item row="1" column="0">
+    <widget class="QLineEdit" name="singersEdit">
+     <property name="placeholderText">
+      <string>Singer Names</string>
+     </property>
+    </widget>
    </item>
    <item row="0" column="1" rowspan="2">
     <widget class="QPushButton" name="songCoverBtn">
@@ -24,11 +28,35 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="0">
-    <widget class="QLineEdit" name="singersEdit"/>
-   </item>
    <item row="2" column="0" colspan="2">
-    <widget class="QTextEdit" name="lyricEdit"/>
+    <widget class="QTextEdit" name="lyricEdit">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="placeholderText">
+      <string>Add lyric lines here...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLineEdit" name="songNameEdit">
+     <property name="placeholderText">
+      <string>Enter Song name</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QPushButton" name="nextBtn">
+     <property name="text">
+      <string>PushButton</string>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

@@ -11,7 +11,7 @@ contact: sunil.nerella39@gmail.com
 ###################################################
 
 
-Copyright (C) 2019-2020 Sunil Kumar Nerella
+Copyright (C) 2019 Sunil Kumar Nerella
 
 Licensed under GNU GPL-3.0-or-later
 
@@ -32,7 +32,7 @@ along with SwaRaagam.  If not, see <https://www.gnu.org/licenses/>.
 
         
         Created By: Sunil Kumar Nerella            
-        Generated on: 16/11/2019 19:53:17
+        Generated on: 17/11/2019 23:25:04
 """
 from PySide2 import QtCore, QtGui, QtWidgets
 

@@ -11,7 +11,7 @@ contact: sunil.nerella39@gmail.com
 ###################################################
 
 
-Copyright (C) 2019-2020 Sunil Kumar Nerella
+Copyright (C) 2019 Sunil Kumar Nerella
 
 Licensed under GNU GPL-3.0-or-later
 
@@ -32,7 +32,7 @@ along with SwaRaagam.  If not, see <https://www.gnu.org/licenses/>.
 
         
         Created By: Sunil Kumar Nerella            
-        Generated on: 16/11/2019 19:53:16
+        Generated on: 17/11/2019 23:25:01
 """
 from PySide2 import QtCore, QtGui, QtWidgets
 
@@ -42,23 +42,33 @@ class Ui_editorHolder(object):
         editorHolder.resize(400, 300)
         self.gridLayout = QtWidgets.QGridLayout(editorHolder)
         self.gridLayout.setObjectName("gridLayout")
-        self.songNameEdit = QtWidgets.QLineEdit(editorHolder)
-        self.songNameEdit.setObjectName("songNameEdit")
-        self.gridLayout.addWidget(self.songNameEdit, 0, 0, 1, 1)
-        self.songCoverBtn = QtWidgets.QPushButton(editorHolder)
-        self.songCoverBtn.setObjectName("songCoverBtn")
-        self.gridLayout.addWidget(self.songCoverBtn, 0, 1, 2, 1)
         self.singersEdit = QtWidgets.QLineEdit(editorHolder)
         self.singersEdit.setObjectName("singersEdit")
         self.gridLayout.addWidget(self.singersEdit, 1, 0, 1, 1)
+        self.songCoverBtn = QtWidgets.QPushButton(editorHolder)
+        self.songCoverBtn.setObjectName("songCoverBtn")
+        self.gridLayout.addWidget(self.songCoverBtn, 0, 1, 2, 1)
         self.lyricEdit = QtWidgets.QTextEdit(editorHolder)
+        self.lyricEdit.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.lyricEdit.setLineWidth(1)
+        self.lyricEdit.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.lyricEdit.setObjectName("lyricEdit")
         self.gridLayout.addWidget(self.lyricEdit, 2, 0, 1, 2)
+        self.songNameEdit = QtWidgets.QLineEdit(editorHolder)
+        self.songNameEdit.setObjectName("songNameEdit")
+        self.gridLayout.addWidget(self.songNameEdit, 0, 0, 1, 1)
+        self.nextBtn = QtWidgets.QPushButton(editorHolder)
+        self.nextBtn.setObjectName("nextBtn")
+        self.gridLayout.addWidget(self.nextBtn, 3, 1, 1, 1)
 
         self.retranslateUi(editorHolder)
         QtCore.QMetaObject.connectSlotsByName(editorHolder)
 
     def retranslateUi(self, editorHolder):
         editorHolder.setWindowTitle(QtWidgets.QApplication.translate("editorHolder", "Form", None, -1))
+        self.singersEdit.setPlaceholderText(QtWidgets.QApplication.translate("editorHolder", "Singer Names", None, -1))
         self.songCoverBtn.setText(QtWidgets.QApplication.translate("editorHolder", "PushButton", None, -1))
+        self.lyricEdit.setPlaceholderText(QtWidgets.QApplication.translate("editorHolder", "Add lyric lines here...", None, -1))
+        self.songNameEdit.setPlaceholderText(QtWidgets.QApplication.translate("editorHolder", "Enter Song name", None, -1))
+        self.nextBtn.setText(QtWidgets.QApplication.translate("editorHolder", "PushButton", None, -1))
 

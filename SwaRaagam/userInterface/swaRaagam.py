@@ -1,4 +1,5 @@
 import sys
+import os as _os
 
 from SwaRaagam.userInterface.uiModels import QtWidgets
 from SwaRaagam.core.ripple import Ripple
@@ -6,6 +7,7 @@ from SwaRaagam.userInterface import (
     welcomeScreen as _welcomeScreen,
     addSong as _addSong,
     lyricEditor as _lyricEditor,
+    lyricLines as _lyricLines,
     pyqtUtils as _pyqtUtils
 )
 
@@ -47,13 +49,24 @@ class SwaRaagamEditor(QtWidgets.QMainWindow):
 
     def setTwoWidget(self):
         self.btnActive = 2
-        widget = _lyricEditor.AddLyricInfo(self)
-        self.setButtonConnections(widget)
-        self.setCentralWidget(widget)
+        if not self.project.lyrics.getSongFile():
+            _pyqtUtils.warningDialog(self, "Song not added", "Please add the song to proceed with the lyricad data")
+            self.stepOneWidget()
+        else:
+            widget = _lyricEditor.AddLyricInfo(self)
+            widget.addLyricInfoWidget.setSongNameFromPath(self.project.lyrics.getSongFile())
+            self.setButtonConnections(widget)
+            self.setCentralWidget(widget)
 
     def setThreeWidget(self):
         self.btnActive = 3
-        print("This is next step")
+        if not self.project.lyrics.getLyricData():
+            _pyqtUtils.warningDialog(self, "Lyrics Not added", "Please add the lyrics to continue with the distribution of lyrics")
+            self.setTwoWidget()
+        else:
+            widget = _lyricLines.LyricLines(self)
+            self.setButtonConnections(widget)
+            self.setCentralWidget(widget)
 
     def setFourWidget(self):
         self.btnActive = 4
@@ -88,7 +101,6 @@ class SwaRaagamEditor(QtWidgets.QMainWindow):
     def regainFilePath(self, filePath):
         if self.project.lyrics.getSongFile():
             self.project.lyrics.removeSongFile()
-
         self.project.copyToDir(filePath)
         self.setTwoWidget()
 
