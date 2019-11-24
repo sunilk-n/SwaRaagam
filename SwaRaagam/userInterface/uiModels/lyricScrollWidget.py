@@ -32,30 +32,36 @@ along with SwaRaagam.  If not, see <https://www.gnu.org/licenses/>.
 
         
         Created By: Sunil Kumar Nerella            
-        Generated on: 17/11/2019 23:25:03
+        Generated on: 24/11/2019 10:32:08
 """
 from PySide2 import QtCore, QtGui, QtWidgets
 
 class Ui_lyricScrollWidget(object):
     def setupUi(self, lyricScrollWidget):
         lyricScrollWidget.setObjectName("lyricScrollWidget")
-        lyricScrollWidget.resize(480, 293)
-        self.verticalLayout = QtWidgets.QVBoxLayout(lyricScrollWidget)
-        self.verticalLayout.setObjectName("verticalLayout")
+        lyricScrollWidget.resize(485, 118)
+        self.gridLayout = QtWidgets.QGridLayout(lyricScrollWidget)
+        self.gridLayout.setObjectName("gridLayout")
         self.lyricScrollArea = QtWidgets.QScrollArea(lyricScrollWidget)
         self.lyricScrollArea.setWidgetResizable(True)
         self.lyricScrollArea.setObjectName("lyricScrollArea")
         self.lyricScrollAreaWidget = QtWidgets.QWidget()
-        self.lyricScrollAreaWidget.setGeometry(QtCore.QRect(0, 0, 460, 273))
+        self.lyricScrollAreaWidget.setGeometry(QtCore.QRect(0, 0, 465, 69))
         self.lyricScrollAreaWidget.setObjectName("lyricScrollAreaWidget")
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.lyricScrollAreaWidget)
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.innerScrollLayout = QtWidgets.QVBoxLayout(self.lyricScrollAreaWidget)
+        self.innerScrollLayout.setObjectName("innerScrollLayout")
         self.lyricScrollArea.setWidget(self.lyricScrollAreaWidget)
-        self.verticalLayout.addWidget(self.lyricScrollArea)
+        self.gridLayout.addWidget(self.lyricScrollArea, 0, 0, 1, 2)
+        spacerItem = QtWidgets.QSpacerItem(386, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout.addItem(spacerItem, 1, 0, 1, 1)
+        self.nextBtn = QtWidgets.QPushButton(lyricScrollWidget)
+        self.nextBtn.setObjectName("nextBtn")
+        self.gridLayout.addWidget(self.nextBtn, 1, 1, 1, 1)
 
         self.retranslateUi(lyricScrollWidget)
         QtCore.QMetaObject.connectSlotsByName(lyricScrollWidget)
 
     def retranslateUi(self, lyricScrollWidget):
         lyricScrollWidget.setWindowTitle(QtWidgets.QApplication.translate("lyricScrollWidget", "Form", None, -1))
+        self.nextBtn.setText(QtWidgets.QApplication.translate("lyricScrollWidget", "PushButton", None, -1))
 

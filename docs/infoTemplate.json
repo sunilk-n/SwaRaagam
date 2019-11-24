@@ -1,0 +1,31 @@
+{
+  "SongName": "Any Song Name",
+  "Singers": ["Name1", "Name2", "Name3"],
+  "Lyrics": {
+    "line0": [
+      "Introduction", //Introduction and ending are default lines in song line to mention start or end music of a song
+      [0, 0, 0], // This line is for singer activation [Singer1, Singer2, Group]
+      0, 5.67 // Start time and end time
+    ],
+    "line1": [
+      "Singer1 Song line 1",
+      [1, 0, 0],
+      5.67, 7.23
+    ],
+    "line2": [
+      "Singer2 song line 2",
+      [0, 1, 0],
+      7.23, 10.65
+    ],
+    "line3": [
+      "Group singer song line 3",
+      [0, 0, 1],
+      10.65, 15.12
+    ],
+    "line4": [
+      "Ending",
+      [0, 0, 0],
+      15.12, 20.0
+    ]
+  }
+}

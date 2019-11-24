@@ -32,7 +32,7 @@ along with SwaRaagam.  If not, see <https://www.gnu.org/licenses/>.
 
         
         Created By: Sunil Kumar Nerella            
-        Generated on: 17/11/2019 23:25:04
+        Generated on: 24/11/2019 10:32:10
 """
 from PySide2 import QtCore, QtGui, QtWidgets
 

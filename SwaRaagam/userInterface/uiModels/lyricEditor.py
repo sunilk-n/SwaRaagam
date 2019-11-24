@@ -32,7 +32,7 @@ along with SwaRaagam.  If not, see <https://www.gnu.org/licenses/>.
 
         
         Created By: Sunil Kumar Nerella            
-        Generated on: 17/11/2019 23:25:01
+        Generated on: 24/11/2019 10:32:06
 """
 from PySide2 import QtCore, QtGui, QtWidgets
 
@@ -66,7 +66,7 @@ class Ui_editorHolder(object):
 
     def retranslateUi(self, editorHolder):
         editorHolder.setWindowTitle(QtWidgets.QApplication.translate("editorHolder", "Form", None, -1))
-        self.singersEdit.setPlaceholderText(QtWidgets.QApplication.translate("editorHolder", "Singer Names", None, -1))
+        self.singersEdit.setPlaceholderText(QtWidgets.QApplication.translate("editorHolder", "Singer Names(Use \',\' for multiple names)", None, -1))
         self.songCoverBtn.setText(QtWidgets.QApplication.translate("editorHolder", "PushButton", None, -1))
         self.lyricEdit.setPlaceholderText(QtWidgets.QApplication.translate("editorHolder", "Add lyric lines here...", None, -1))
         self.songNameEdit.setPlaceholderText(QtWidgets.QApplication.translate("editorHolder", "Enter Song name", None, -1))

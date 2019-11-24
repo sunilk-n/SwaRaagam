@@ -17,7 +17,7 @@
    <item row="1" column="0">
     <widget class="QLineEdit" name="singersEdit">
      <property name="placeholderText">
-      <string>Singer Names</string>
+      <string>Singer Names(Use ',' for multiple names)</string>
      </property>
     </widget>
    </item>
